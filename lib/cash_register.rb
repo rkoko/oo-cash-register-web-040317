@@ -16,7 +16,7 @@ class CashRegister
   end
 
   def apply_discount
-    if self.discount > 0
+    if @discount > 0
       @total = self.total - @discount*10
       return "After the discount, the total comes to $#{self.total}."
     end
@@ -32,6 +32,5 @@ class CashRegister
     def void_last_transaction
       @total = self.total - @last_price
     end
-
 
 end
